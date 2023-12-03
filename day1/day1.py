@@ -7,12 +7,12 @@ digits = ['one', 'two', 'three', 'four', 'five', 'six', 'seven',
 
 
 def part1(in_file: str):
-    with open(in_file) as file:
+    with open(in_file, encoding='utf-8') as file:
         print(sum(map(first_last_digit_num, file.readlines())))
 
 
 def part2(in_file: str):
-    with open(in_file) as file:
+    with open(in_file, encoding='utf-8') as file:
         print(sum(map(first_last_digit_word_num, file.readlines())))
 
 
@@ -35,7 +35,11 @@ def first_last_digit_word_num(line: str):
     return r
 
 
-if __name__ == "__main__":
+def main():
     in_file = 'main.input'
     part1(in_file)
     part2(in_file)
+
+
+if __name__ == "__main__":
+    main()
